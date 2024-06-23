@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/EcomUserAuthService.iml" filepath="$PROJECT_DIR$/.idea/EcomUserAuthService.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/EcomUserAuthService.EcomUserAuthService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/EcomUserAuthService.EcomUserAuthService.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.example.EcomUserAuthService.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.example.EcomUserAuthService.main.iml" />
     </modules>
   </component>
 </project>

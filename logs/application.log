@@ -1,0 +1,135 @@
+2024-06-23T14:10:20.700+05:30  INFO 14188 --- [EcomUserAuthService] [main] c.e.E.EcomUserAuthServiceApplication     : Starting EcomUserAuthServiceApplication using Java 17.0.11 with PID 14188 (D:\EcomUserAuthService\EcomUserAuthService\build\classes\java\main started by dhanu in D:\EcomUserAuthService)
+2024-06-23T14:10:20.700+05:30  INFO 14188 --- [EcomUserAuthService] [main] c.e.E.EcomUserAuthServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T14:10:21.827+05:30  INFO 14188 --- [EcomUserAuthService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T14:10:21.931+05:30  INFO 14188 --- [EcomUserAuthService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 86 ms. Found 3 JPA repository interfaces.
+2024-06-23T14:10:22.995+05:30  INFO 14188 --- [EcomUserAuthService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T14:10:23.026+05:30  INFO 14188 --- [EcomUserAuthService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T14:10:23.026+05:30  INFO 14188 --- [EcomUserAuthService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-23T14:10:23.167+05:30  INFO 14188 --- [EcomUserAuthService] [main] o.a.c.c.C.[.[.[/ecom-user-auth]          : Initializing Spring embedded WebApplicationContext
+2024-06-23T14:10:23.167+05:30  INFO 14188 --- [EcomUserAuthService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2362 ms
+2024-06-23T14:10:23.432+05:30  INFO 14188 --- [EcomUserAuthService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T14:10:23.511+05:30  INFO 14188 --- [EcomUserAuthService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23T14:10:23.573+05:30  INFO 14188 --- [EcomUserAuthService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-23T14:10:23.995+05:30  INFO 14188 --- [EcomUserAuthService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T14:10:24.026+05:30  INFO 14188 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T14:10:24.277+05:30  INFO 14188 --- [EcomUserAuthService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5ed25612
+2024-06-23T14:10:24.277+05:30  INFO 14188 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T14:10:24.323+05:30  WARN 14188 --- [EcomUserAuthService] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T14:10:25.593+05:30  INFO 14188 --- [EcomUserAuthService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T14:10:25.671+05:30  INFO 14188 --- [EcomUserAuthService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T14:10:25.687+05:30  WARN 14188 --- [EcomUserAuthService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileStorageController': Unsatisfied dependency expressed through field 'fileStorageService': No qualifying bean of type 'com.example.FileStorageService.Service.FileStorageService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-06-23T14:10:25.702+05:30  INFO 14188 --- [EcomUserAuthService] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T14:10:25.702+05:30  INFO 14188 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T14:10:25.718+05:30  INFO 14188 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T14:10:25.718+05:30  INFO 14188 --- [EcomUserAuthService] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-23T14:10:25.738+05:30  INFO 14188 --- [EcomUserAuthService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-23T14:10:25.785+05:30 ERROR 14188 --- [EcomUserAuthService] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field fileStorageService in com.example.EcomUserAuthService.Controller.FileStorageController required a bean of type 'com.example.FileStorageService.Service.FileStorageService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.FileStorageService.Service.FileStorageService' in your configuration.
+
+2024-06-23T14:11:31.827+05:30  INFO 8752 --- [EcomUserAuthService] [main] c.e.E.EcomUserAuthServiceApplication     : Starting EcomUserAuthServiceApplication using Java 17.0.11 with PID 8752 (D:\EcomUserAuthService\EcomUserAuthService\build\classes\java\main started by dhanu in D:\EcomUserAuthService)
+2024-06-23T14:11:31.827+05:30  INFO 8752 --- [EcomUserAuthService] [main] c.e.E.EcomUserAuthServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T14:11:33.109+05:30  INFO 8752 --- [EcomUserAuthService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T14:11:33.266+05:30  INFO 8752 --- [EcomUserAuthService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 3 JPA repository interfaces.
+2024-06-23T14:11:34.359+05:30  INFO 8752 --- [EcomUserAuthService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T14:11:34.375+05:30  INFO 8752 --- [EcomUserAuthService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T14:11:34.375+05:30  INFO 8752 --- [EcomUserAuthService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-23T14:11:34.516+05:30  INFO 8752 --- [EcomUserAuthService] [main] o.a.c.c.C.[.[.[/ecom-user-auth]          : Initializing Spring embedded WebApplicationContext
+2024-06-23T14:11:34.516+05:30  INFO 8752 --- [EcomUserAuthService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2594 ms
+2024-06-23T14:11:34.751+05:30  INFO 8752 --- [EcomUserAuthService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T14:11:34.829+05:30  INFO 8752 --- [EcomUserAuthService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23T14:11:34.876+05:30  INFO 8752 --- [EcomUserAuthService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-23T14:11:35.329+05:30  INFO 8752 --- [EcomUserAuthService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T14:11:35.412+05:30  INFO 8752 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T14:11:35.752+05:30  INFO 8752 --- [EcomUserAuthService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c497a55
+2024-06-23T14:11:35.767+05:30  INFO 8752 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T14:11:35.815+05:30  WARN 8752 --- [EcomUserAuthService] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T14:11:37.374+05:30  INFO 8752 --- [EcomUserAuthService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T14:11:37.458+05:30  INFO 8752 --- [EcomUserAuthService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T14:11:37.473+05:30  WARN 8752 --- [EcomUserAuthService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileStorageController': Unsatisfied dependency expressed through field 'fileStorageService': No qualifying bean of type 'com.example.FileStorageService.Service.FileStorageService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-06-23T14:11:37.473+05:30  INFO 8752 --- [EcomUserAuthService] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T14:11:37.482+05:30  INFO 8752 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T14:11:37.482+05:30  INFO 8752 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T14:11:37.482+05:30  INFO 8752 --- [EcomUserAuthService] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-23T14:11:37.498+05:30  INFO 8752 --- [EcomUserAuthService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-23T14:11:37.545+05:30 ERROR 8752 --- [EcomUserAuthService] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field fileStorageService in com.example.EcomUserAuthService.Controller.FileStorageController required a bean of type 'com.example.FileStorageService.Service.FileStorageService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.FileStorageService.Service.FileStorageService' in your configuration.
+
+2024-06-23T14:16:42.799+05:30  INFO 10764 --- [EcomUserAuthService] [main] c.e.E.EcomUserAuthServiceApplication     : Starting EcomUserAuthServiceApplication using Java 17.0.11 with PID 10764 (D:\EcomUserAuthService\EcomUserAuthService\build\classes\java\main started by dhanu in D:\EcomUserAuthService)
+2024-06-23T14:16:42.799+05:30  INFO 10764 --- [EcomUserAuthService] [main] c.e.E.EcomUserAuthServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2024-06-23T14:16:43.905+05:30  INFO 10764 --- [EcomUserAuthService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-23T14:16:44.025+05:30  INFO 10764 --- [EcomUserAuthService] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 3 JPA repository interfaces.
+2024-06-23T14:16:45.063+05:30  INFO 10764 --- [EcomUserAuthService] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-23T14:16:45.078+05:30  INFO 10764 --- [EcomUserAuthService] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-23T14:16:45.078+05:30  INFO 10764 --- [EcomUserAuthService] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-23T14:16:45.219+05:30  INFO 10764 --- [EcomUserAuthService] [main] o.a.c.c.C.[.[.[/ecom-user-auth]          : Initializing Spring embedded WebApplicationContext
+2024-06-23T14:16:45.219+05:30  INFO 10764 --- [EcomUserAuthService] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2336 ms
+2024-06-23T14:16:45.484+05:30  INFO 10764 --- [EcomUserAuthService] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-23T14:16:45.547+05:30  INFO 10764 --- [EcomUserAuthService] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-23T14:16:45.625+05:30  INFO 10764 --- [EcomUserAuthService] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-23T14:16:46.141+05:30  INFO 10764 --- [EcomUserAuthService] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-23T14:16:46.198+05:30  INFO 10764 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-23T14:16:46.532+05:30  INFO 10764 --- [EcomUserAuthService] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@451816fd
+2024-06-23T14:16:46.532+05:30  INFO 10764 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-23T14:16:46.579+05:30  WARN 10764 --- [EcomUserAuthService] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-06-23T14:16:47.964+05:30  INFO 10764 --- [EcomUserAuthService] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-23T14:16:48.057+05:30  INFO 10764 --- [EcomUserAuthService] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T14:16:48.057+05:30  WARN 10764 --- [EcomUserAuthService] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fileStorageController': Unsatisfied dependency expressed through field 'fileStorageService': No qualifying bean of type 'com.example.FileStorageService.Service.FileStorageService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2024-06-23T14:16:48.073+05:30  INFO 10764 --- [EcomUserAuthService] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-23T14:16:48.073+05:30  INFO 10764 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-23T14:16:48.073+05:30  INFO 10764 --- [EcomUserAuthService] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-23T14:16:48.089+05:30  INFO 10764 --- [EcomUserAuthService] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2024-06-23T14:16:48.089+05:30  INFO 10764 --- [EcomUserAuthService] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-06-23T14:16:48.149+05:30 ERROR 10764 --- [EcomUserAuthService] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field fileStorageService in com.example.EcomUserAuthService.Controller.FileStorageController required a bean of type 'com.example.FileStorageService.Service.FileStorageService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.example.FileStorageService.Service.FileStorageService' in your configuration.
+

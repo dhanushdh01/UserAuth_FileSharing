@@ -6,6 +6,7 @@ import com.example.EcomUserAuthService.DTO.UserResponseDTO;
 import com.example.EcomUserAuthService.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.management.relation.RoleNotFoundException;
@@ -15,6 +16,18 @@ import javax.management.relation.RoleNotFoundException;
 public class UserController {
     @Autowired
     private UserService userService;
+
+    @GetMapping("/admin")
+    @PreAuthorize("hasRole('ADMIN')")
+    public String adminEndpoint() {
+        return "Welcome, Admin!";
+    }
+
+    @GetMapping("/user")
+    @PreAuthorize("hasRole('USER')")
+    public String userEndpoint() {
+        return "Welcome, User!";
+    }
 
     @PostMapping("/login")
     public ResponseEntity<UserResponseDTO> login(@RequestBody LoginRequestDTO loginRequestDTO){
